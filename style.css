@@ -27,14 +27,15 @@ a{
   transition:200ms;
 }
 
-.tile:hover{
+#left .tile{
+  font-size:50px; 
+}
+
+#left .tile:hover{
   color:rgba(0,0,0,0.75);
   box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
-#left .tile{
-  font-size:50px; 
-}
 #right .tile{
   font-size:50px;
 }
