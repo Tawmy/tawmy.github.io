@@ -28,7 +28,7 @@ a{
 }
 
 #left .tile{
-  font-size:50px; 
+  font-size:30px; 
 }
 
 #left .tile:hover{
@@ -37,7 +37,7 @@ a{
 }
 
 #right .tile{
-  font-size:50px;
+  font-size:30px;
 }
 
 .subtitle{
@@ -55,10 +55,12 @@ a{
 }
 
 #left .tile{
-  margin-right:1.75%; 
+  margin-right:1.75%;
+  font-size:50px; 
 }
 #right .tile{
   margin-left:1.75%;
+  font-size:50px;
 }
 
 }
