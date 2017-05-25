@@ -18,6 +18,8 @@ a{
 }
 
 .tile{
+  position:relative;
+  overflow:hidden;
   margin:5%;
   padding:7.5%;
   background:white;
@@ -27,9 +29,24 @@ a{
   transition:200ms;
 }
 
+.header{
+  text-align:center;
+  display:block !important;
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none; 
+  cursor:default;
+}
+
+.header:hover{
+  color:rgba(0,0,0,0.5) !important;
+  box-shadow:0 2px 2px rgba(0,0,0,0.1) !important;
+}
+
 #left .tile{
   font-size:30px; 
-}
+} 
 
 #left .tile:hover{
   color:rgba(0,0,0,0.75);
@@ -37,11 +54,66 @@ a{
 }
 
 #right .tile{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  
   font-size:30px;
 }
 
-.subtitle{
-  font-size:0.4em;
+#right a{
+  color:rgba(0,0,0,0.5);
+}
+
+#right a:hover{
+  color:rgba(0,0,0,0.75);
+}
+
+.title{
+  position:relative;
+  text-align:left;
+}
+
+.title:after{
+  position:absolute;
+  content:'';
+  right:-20px;
+  bottom:-20px;
+  width:200%;
+  height:6px;
+  background:#9C27B0;
+  transform:skew(-22.5deg) translateX(-100%);
+  pointer-events:none;
+  transition:250ms;
+}
+
+.title:hover:after{
+  transform:skew(-22.5deg) translateX(-0%);
+}
+ 
+.score{ 
+}
+
+.score:after{
+  content:" / 10"
+}
+
+.description{
+  margin-top:2.45em;
+  flex-basis:100%;
+  font-size:18px; 
+  text-align:justify;
+}
+
+.tile img{
+  position:absolute;
+  height:100%;
+  right:0;
+  top:0;
+  opacity:0.15; /*Setting opacity here and using gradient from 1 to 0 for compatibility (fuck Edge)*/
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-image: -webkit-gradient(linear, right bottom, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  pointer-events:none;
 }
 
 @media only screen and (min-width : 768px) {
@@ -57,6 +129,10 @@ a{
   font-size:50px;
 }
 
+.description{
+  font-size:24px;
+}
+
 }
 
 @media only screen and (min-width : 1024px) {
@@ -67,9 +143,28 @@ a{
 
 #left .tile{
   margin-right:1.75%;
+  font-size:30px;
 }
 #right .tile{
   margin-left:1.75%;
+  font-size:30px;
+}
+
+.description{
+  font-size:18px;
+}
+
+@media only screen and (min-width : 1440px) {
+
+#left .tile{
+  font-size:50px;
+}
+#right .tile{
+  font-size:50px;
+}
+
+.description{
+  font-size:24px;
 }
 
 }
