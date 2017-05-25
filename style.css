@@ -29,10 +29,6 @@ a{
   transition:200ms;
 }
 
-.tile:hover img{
-  opacity:0.33;
-}
-
 .header{
   text-align:center;
   display:block !important;
@@ -125,7 +121,7 @@ a{
   min-width:100%;
   right:0;
   top:0;
-  opacity:0.025; /*Setting opacity here and using gradient from 1 to 0 for compatibility (fuck Edge)*/
+  opacity:0.1;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   pointer-events:none;
@@ -182,9 +178,6 @@ a{
 #right .tile{
   margin-left:1.75%;
   font-size:30px;
-}
-.tile img{
- opacity:0.1;
 }
 
 .score{
