@@ -145,6 +145,10 @@ a{
   -webkit-mask-image: -webkit-gradient(linear, right bottom, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   pointer-events:none;
   transition:200ms;
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media only screen and (min-width : 768px) {
