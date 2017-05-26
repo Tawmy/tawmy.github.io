@@ -15,7 +15,7 @@ a{
   display:inline-block;
   vertical-align:top;
   width:100%;
-  padding:0 35px;
+  padding:0 4vmin 4vmin 4vmin;
 }
 
 .tile{
@@ -23,7 +23,7 @@ a{
   display: inline-block;
   position:relative;
   overflow:hidden;
-  margin-top:35px;
+  margin-top:4vmin;
   padding:7.5%;
   background:white;
   color:rgba(0,0,0,0.5);
@@ -36,7 +36,7 @@ a{
   box-sizing: border-box;
   display: inline-block;
   position:relative;
-  margin-top:35px;
+  margin-top:4vmin;
   padding:7.5%;
   background:white;
   color:rgba(0,0,0,0.5);
@@ -143,11 +143,11 @@ a{
 @media only screen and (min-width : 768px) {
 
 #left .tile{
-  width:calc(50% - 17.5px);
+  width:calc(50% - 2vmin);
   font-size:30px; 
 }
 #left a:nth-child(odd){
-  margin-left:35px;
+  margin-left:4vmin;
 }
 #right .tile{
   font-size:50px;
