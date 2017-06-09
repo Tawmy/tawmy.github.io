@@ -2,7 +2,7 @@ html,body{
   margin:0;
   font-size:0;
   font-family: 'Roboto', sans-serif;
-  font-weight:300;
+  font-weight:100;
   background:#EEEEEE;
 }
 
@@ -63,7 +63,8 @@ a{
 }
 
 #left .tile{
-  font-size:24px; 
+  font-size:24px;
+  font-weight:300;
   width:100%;
   padding:5%;
 }
@@ -132,6 +133,7 @@ a{
   margin-top:1.75em;
   flex-basis:100%;
   font-size:18px; 
+  font-weight:300;
   text-align:justify;
 }
 
