@@ -33,7 +33,7 @@ a{
   opacity:0;
   animation-name: show;
   animation-duration: 1s;
-  animation-delay: 0.25s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 .twitter:after{
@@ -56,6 +56,7 @@ a{
   font-size:50px;
   text-align:center;
   box-shadow:0 2px 2px rgba(0,0,0,0.1);
+  opacity:0;
   -webkit-user-select: none;
   -moz-user-select: none; 
   -ms-user-select: none;
@@ -63,6 +64,8 @@ a{
   cursor:default;
   animation-name: show;
   animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
 }
 #links{
   width:calc(100% - 35px) !important;
