@@ -12,7 +12,7 @@ html,body{
 
 	margin: 0;
 	height: 100%;
-	background: black;
+	background: #00796B;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -33,6 +33,8 @@ a{
 }
 
 a:hover img{
+	box-shadow: 0 2vmin 6vmin rgba(0, 0, 0, 0.33);
+	
 	transform: scale(1.05);
 
 	transition: 100ms;
@@ -52,7 +54,7 @@ a img{
 	background: #fff;
 	border-radius: 20%;
 
-	transition: 500ms;
+	transition: 300ms; 
 }
 
 #anilist img{
@@ -84,7 +86,7 @@ a img{
 	}
 	100%{
 		transform: scale(1);
-		opacity: 100%;
+		opacity: 1;
 		filter: blur(0px);
 		pointer-events: none;
 	}
