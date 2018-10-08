@@ -11,6 +11,7 @@ html,body{
 	align-content: center;
 
 	margin: 0;
+	width: 100%;
 	height: 100%;
 	background: #00796B;
 	font-family: 'Open Sans', sans-serif;
@@ -47,6 +48,7 @@ a:active img{
 }
 
 a img{
+	box-sizing: border-box;
 	margin-bottom: calc(var(--linkSize) / 10);
 	width: var(--linkSize);
 	height: var(--linkSize);
@@ -58,13 +60,14 @@ a img{
 }
 
 #anilist img{
+	padding: 6%;
 	background: rgba(25,33,44,1);
 }
 #discord img{
+	padding: 3%;
 	background: #7289DA;
 }
 #steam img{
-	box-sizing: border-box;
 	padding: 15%;
 }
 #twitter img{
