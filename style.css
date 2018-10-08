@@ -28,6 +28,20 @@ a{
 	font-size: calc(var(--linkSize) / 5);
 	color: white;
 	text-decoration: none;
+
+	animation: showApp 800ms;
+}
+
+a:hover img{
+	transform: scale(1.05);
+
+	transition: 100ms;
+}
+
+a:active img{
+	transform: scale(0.95);
+
+	transition: 100ms;
 }
 
 a img{
@@ -37,6 +51,8 @@ a img{
 	
 	background: #fff;
 	border-radius: 20%;
+
+	transition: 500ms;
 }
 
 #anilist img{
@@ -49,9 +65,27 @@ a img{
 	box-sizing: border-box;
 	padding: 15%;
 }
+#twitter img{
+	background: rgba(42,163,239,1);
+}
 
 @media only screen and (min-width : 500px) {
 	:root{
 		--linkSize: 20vmin;
+	}
+}
+
+@keyframes showApp{
+	0%{
+		transform: scale(1.5);
+		opacity: 0;
+		filter: blur(10px);
+		pointer-events: none;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 100%;
+		filter: blur(0px);
+		pointer-events: none;
 	}
 }
