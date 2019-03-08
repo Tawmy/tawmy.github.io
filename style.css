@@ -83,15 +83,12 @@ section ul li:first-child{
 }
 
 footer{
-	--backdrop-filter: blur(8px);
 	box-sizing: border-box;
 	position: fixed;
 	padding: var(--linkMargin);
 	bottom: 0;
 	width: 100%;
 	transform-origin: bottom;
-	-webkit-backdrop-filter: var(--backdrop-filter);
-	backdrop-filter: var(--backdrop-filter);
 
 	display: flex;
 	justify-content: space-evenly;
@@ -199,7 +196,9 @@ footer a img{
 	}
 
 	footer:before{
-		clip-path: polygon(0 100%, 20px 60%, calc(100% - 20px) 60%, 100% 100%);
+		--clip-path: polygon(0 100%, 20px 60%, calc(100% - 20px) 60%, 100% 100%);
+		-webkit-clip-path: var(--clip-path);
+		clip-path: var(--clip-path);
 	}
 
 	footer a{
