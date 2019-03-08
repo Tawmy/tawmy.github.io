@@ -9,14 +9,15 @@ html,body{
 }
 
 footer{
+	box-sizing: border-box;
 	position: fixed;
-	padding: var(--linkMargin) 0;
+	padding: var(--linkMargin);
 	bottom: 0;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
 
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 footer a{
@@ -25,6 +26,8 @@ footer a{
 	width: var(--linkSize);
 	height: var(--linkSize);
 	border-radius: calc(var(--linkSize) / 4);
+
+	flex-shrink: 0;
 }
 
 footer a:active{
