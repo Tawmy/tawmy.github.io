@@ -24,7 +24,8 @@ section{
 	display: grid;
 	grid-template-rows: auto auto;
 	grid-template-columns: auto;
-	place-items: center;
+	justify-items: center;
+	align-items: center;
 }
 
 section img{
@@ -152,7 +153,7 @@ footer a img{
 	width: 100%;
 	height: 100%;
 	border-radius: calc(var(--linkSize) / 4);
-	-webkit-box-reflect: below 10% -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--topColor)));;
+	-webkit-box-reflect: below 10% -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--topColor)));
 }
 
 #anilist img{
@@ -234,6 +235,6 @@ footer a img{
 	}
 
 	footer a:hover img{
-		--topColor: rgba(255,255,255,0.75);
+		--topColor: rgba(255,255,255,0.66);
 	}
 }
