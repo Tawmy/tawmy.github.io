@@ -9,6 +9,8 @@ html,body{
 	margin: 0;
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(120deg, rgba(26, 35, 126, 1) 20%, rgb(183, 28, 28));
+	color: white;
 }
 
 body{
@@ -78,13 +80,16 @@ section ul li:first-child{
 }
 
 footer{
+	--backdrop-filter: blur(8px);
 	box-sizing: border-box;
 	position: fixed;
 	padding: var(--linkMargin);
 	bottom: 0;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(255, 255, 255, 0.2);
 	transform-origin: bottom;
+	-webkit-backdrop-filter: var(--backdrop-filter);
+	backdrop-filter: var(--backdrop-filter);
 
 	display: flex;
 	justify-content: space-evenly;
@@ -167,7 +172,7 @@ footer a img{
 		transform: translate(0, 0)scale(1);
 	}
 }
-
+  
 @media only screen and (min-width : 500px) {
 	:root{
 		--linkSize: 65px;
