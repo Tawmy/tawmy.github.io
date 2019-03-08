@@ -34,7 +34,11 @@ section img{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-  
+	
+	animation-name: showAvatar;
+	animation-duration: 650ms;
+	animation-delay: 250ms;
+	animation-fill-mode: backwards;
 }
 
 section ul{
@@ -46,6 +50,13 @@ section ul{
 	grid-template-columns: auto auto;
 	grid-row-gap: var(--listMargin);
 	grid-column-gap: calc(var(--listMargin) * 2);
+}
+
+section ul li{
+	animation-name: showText;
+	animation-duration: 500ms;
+	animation-delay: 800ms;
+	animation-fill-mode: backwards;
 }
 
 section ul li:first-child{
@@ -62,6 +73,8 @@ section ul li:first-child{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	animation-delay: 600ms;
 }
 
 footer{
@@ -71,9 +84,15 @@ footer{
 	bottom: 0;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
+	transform-origin: bottom;
 
 	display: flex;
 	justify-content: space-evenly;
+
+	animation-name: showDock;
+	animation-duration: 650ms;
+	animation-delay: 1100ms;
+	animation-fill-mode: backwards;
 }
 
 footer a{
@@ -110,6 +129,43 @@ footer a img{
 #zootopia img{
 	padding: 12%;
 	background: #36393E;
+}
+
+@keyframes showAvatar{
+	0%{
+		filter: opacity(0%);
+		transform: scale(0.5);
+	}
+	100%{
+		filter: opacity(100%);
+		transform: scale(1);
+	}
+}
+
+@keyframes showText{
+	0%{
+		filter: opacity(0%);
+		transform: translate(0, -100%);
+	}
+	100%{
+		filter: opacity(100%);
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes showDock{
+	0%{
+		filter: opacity(0%);
+		transform: translate(0, 100%)scale(0.5);
+	}
+	60%{
+		filter: opacity(100%);
+		transform: translate(0, 0)scale(1.05);
+	}
+	100%{
+		filter: opacity(100%);
+		transform: translate(0, 0)scale(1);
+	}
 }
 
 @media only screen and (min-width : 500px) {
