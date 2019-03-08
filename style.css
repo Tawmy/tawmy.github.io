@@ -147,10 +147,12 @@ footer a:before{
 }
 
 footer a img{
+	--topColor: rgba(255,255,255,0.5);
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
 	border-radius: calc(var(--linkSize) / 4);
+	-webkit-box-reflect: below 10% -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--topColor)));;
 }
 
 #anilist img{
@@ -224,5 +226,14 @@ footer a img{
 
 	footer a:hover:before{
 		display: initial;
+	}
+	@supports(-webkit-box-reflect: below){
+		footer a:hover:before{
+			display: none;
+		}
+	}
+
+	footer a:hover img{
+		--topColor: rgba(255,255,255,0.75);
 	}
 }
