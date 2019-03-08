@@ -5,7 +5,33 @@
 
 html,body{
 	margin: 0;
+	height: 100%;
+	margin-bottom: calc(var(--linkSize) + calc(var(--linkMargin) * 4));
 	font-family: 'Open Sans', sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section{
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto;
+	place-items: center;
+}
+
+section img{
+	width: 50%;
+	border-radius: 100%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+section ul{
+	margin: 20px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
 }
 
 footer{
