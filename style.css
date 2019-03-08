@@ -78,6 +78,7 @@ section ul li:first-child{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	cursor: default;
 
 	animation-delay: 600ms;
 }
@@ -100,6 +101,8 @@ footer{
 }
 
 footer:before{
+	--clip-path: polygon(0 100%, calc(var(--linkSize) * 0.3) 60%, calc(100% - calc(var(--linkSize) * 0.3)) 60%, 100% 100%);
+
 	z-index: -1;
 	position: absolute;
 	content: '';
@@ -108,6 +111,9 @@ footer:before{
 	height: 100%;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.2);
+
+	-webkit-clip-path: var(--clip-path);
+	clip-path: var(--clip-path);
 }
 
 footer a{
@@ -193,12 +199,6 @@ footer a img{
 	footer{
 		padding: var(--linkMargin) calc(var(--linkMargin) *2);
 		width: initial;
-	}
-
-	footer:before{
-		--clip-path: polygon(0 100%, 20px 60%, calc(100% - 20px) 60%, 100% 100%);
-		-webkit-clip-path: var(--clip-path);
-		clip-path: var(--clip-path);
 	}
 
 	footer a{
