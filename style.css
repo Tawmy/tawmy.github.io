@@ -112,6 +112,7 @@ footer:before{
 	height: 100%;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.2);
+	border-radius: calc(var(--linkSize) / 4) calc(var(--linkSize) / 4) 0 0; /* Edge */
 
 	-webkit-clip-path: var(--clip-path);
 	clip-path: var(--clip-path);
