@@ -29,20 +29,37 @@ section{
 	align-items: center;
 }
 
-section img{
-	width: 50%;
-	border-radius: 100%;
-	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+#avatar{
+	z-index: 10;
+	position: relative;
+	width: 175px;
+	height: 175px;
 	pointer-events: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	filter: saturate(126%);
 	
 	animation-name: showAvatar;
 	animation-duration: 650ms;
 	animation-delay: 250ms;
 	animation-fill-mode: backwards;
+}
+
+#avatar:before{
+	z-index: -1;
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url('img/tawmy.jpg');
+	background-size: cover;
+	border-radius: 100%;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+	filter: saturate(149%);
 }
 
 section ul{
@@ -197,11 +214,11 @@ footer .title:before{
 
 @keyframes showAvatar{
 	0%{
-		filter: opacity(0%);
+		filter: opacity(0%)saturate(126%);
 		transform: scale(0.5);
 	}
 	100%{
-		filter: opacity(100%);
+		filter: opacity(100%)saturate(126%);
 		transform: scale(1);
 	}
 }
