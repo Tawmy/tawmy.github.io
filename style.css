@@ -93,12 +93,6 @@ section ul li:first-child{
 	font-weight: 100;
 	font-family: 'Raleway', sans-serif;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
-
 	animation-delay: 500ms;
 }
 
