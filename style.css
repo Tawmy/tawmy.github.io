@@ -202,6 +202,10 @@ footer .title:before{
 #twitter img{
 	background: rgba(42,163,239,1);
 }
+#github img{
+	padding: 18%;
+	background: #212121;
+}
 #zootopia img{
 	padding: 12%;
 	background: #36393E;
