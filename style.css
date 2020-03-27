@@ -19,7 +19,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: calc(var(--linkSize) + calc(var(--linkMargin) * 4));
+	padding-bottom: 20vw;
 }
 
 section{
@@ -252,6 +252,10 @@ footer .title:before{
 	:root{
 		--listMargin: 20px;
 		--linkMargin: 6px;
+	}
+
+	body{
+		padding-bottom: 95px;
 	}
 
 	section ul li{
