@@ -1,7 +1,7 @@
 :root{
-	--linkSize: 65px;
-	--linkSizeMax: 18vw;
-	--linkMargin: 7.5px;
+	--linkSize: 15vw;
+	--linkSizeMax: 65px;
+	--linkMargin: 1.5vw;
 	--listMargin: 10px;
 }
 
@@ -119,7 +119,7 @@ footer{
 }
 
 footer:before{
-	--clip-path: polygon(0 100%, calc(var(--linkSize) * 0.3) 60%, calc(100% - calc(var(--linkSize) * 0.3)) 60%, 100% 100%);
+	--clip-path: polygon(0 100%, 22px 60%, calc(100% - 22px) 60%, 100% 100%);
 
 	z-index: -1;
 	position: absolute;
@@ -251,6 +251,7 @@ footer .title:before{
 @media only screen and (min-width : 500px) {
 	:root{
 		--listMargin: 20px;
+		--linkMargin: 6px;
 	}
 
 	section ul li{
