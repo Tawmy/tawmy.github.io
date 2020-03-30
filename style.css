@@ -164,7 +164,7 @@ footer a img{
 footer .title{
 	display: none;
 	position: absolute;
-	top: calc(var(--linkSize) / 2 * -1 - var(--linkMargin) * 4);
+	bottom: calc(100% + 4vw);
 	padding: 10px 18px;
 	background: rgba(0, 0, 0, 0.2);
 	font-weight: 500;
@@ -272,6 +272,10 @@ footer .title:before{
 
 	footer a{
 		margin: var(--linkMargin) calc(var(--linkMargin) * 1.5);
+	}
+
+	footer .title{
+		bottom: calc(100% + 18px);
 	}
 }
 @media not all and (hover: none){
