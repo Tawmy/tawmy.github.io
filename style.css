@@ -114,7 +114,7 @@ footer{
 
 	animation-name: showDock;
 	animation-duration: 650ms;
-	animation-delay: 1100ms;
+	animation-delay: 900ms; /* reduced from 1100 to accomodate removal of Discord username. Increase again if any usernames are added */
 	animation-fill-mode: backwards;
 }
 
@@ -191,14 +191,6 @@ footer .title:before{
     border-top: var(--arrow-height) solid rgba(0, 0, 0, 0.2);
 }
 
-#anilist img{
-	padding: 6%;
-	background: rgba(25,33,44,1);
-}
-#steam img{
-	padding: 15%;
-	background: #fff;
-}
 #twitter img{
 	background: rgba(42,163,239,1);
 }
