@@ -195,6 +195,10 @@ footer .title:before{
 	padding: 18%;
 	background: #212121;
 }
+#steam img{
+	padding: 14%;
+	background: #fff;
+}
 #zootopia img{
 	padding: 12%;
 	background: #36393E;
