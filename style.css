@@ -191,9 +191,6 @@ footer .title:before{
     border-top: var(--arrow-height) solid rgba(0, 0, 0, 0.2);
 }
 
-#twitter img{
-	background: rgba(42,163,239,1);
-}
 #github img{
 	padding: 18%;
 	background: #212121;
