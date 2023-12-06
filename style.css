@@ -3,6 +3,8 @@
 	--linkSizeMax: 65px;
 	--linkMargin: 1.5vw;
 	--listMargin: 10px;
+	--popAppDelay: 1100ms;
+	--popAppDelayDiff: 100ms;
 }
 
 html,body{
@@ -114,7 +116,7 @@ footer{
 
 	animation-name: showDock;
 	animation-duration: 650ms;
-	animation-delay: 900ms; /* reduced from 1100 to accomodate removal of Discord username. Increase again if any usernames are added */
+	animation-delay: 900ms; /* reduced from 1100 to accommodate removal of Discord username. Increase again if any usernames are added */
 	animation-fill-mode: backwards;
 }
 
@@ -131,7 +133,6 @@ footer:before{
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: calc(var(--linkSize) / 4) calc(var(--linkSize) / 4) 0 0; /* Edge */
 
-	-webkit-clip-path: var(--clip-path);
 	clip-path: var(--clip-path);
 }
 
@@ -146,6 +147,26 @@ footer a{
 	flex-shrink: 0;
 	display: flex;
 	justify-content: center;
+
+	animation-name: popApp;
+	animation-duration: 500ms;
+	animation-delay: var(--popAppDelay);
+	animation-fill-mode: backwards;
+
+	transform-origin: bottom;
+}
+
+footer a:nth-of-type(2) {
+	animation-delay: calc(var(--popAppDelay) + var(--popAppDelayDiff) * 1);
+}
+footer a:nth-of-type(3) {
+	animation-delay: calc(var(--popAppDelay) + var(--popAppDelayDiff) * 2);
+}
+footer a:nth-of-type(4) {
+	animation-delay: calc(var(--popAppDelay) + var(--popAppDelayDiff) * 3);
+}
+footer a:nth-of-type(5) {
+	animation-delay: calc(var(--popAppDelay) + var(--popAppDelayDiff) * 4);
 }
 
 footer a:active > img{
@@ -242,6 +263,18 @@ footer .title:before{
 	100%{
 		filter: opacity(100%);
 		transform: translate(0, 0)scale(1);
+	}
+}
+
+@keyframes popApp {
+	0%{
+		transform: scale(0);
+	}
+	60%{
+		transform: scale(1.08);
+	}
+	100%{
+		transform: scale(1);
 	}
 }
   
