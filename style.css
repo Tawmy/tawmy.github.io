@@ -42,7 +42,6 @@ section{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	filter: saturate(126%);
 	
 	animation-name: showAvatar;
 	animation-duration: 650ms;
@@ -58,11 +57,10 @@ section{
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url('img/tawmy.jpg');
+	background: url('img/alyx_compressed.webp');
 	background-size: cover;
 	border-radius: 100%;
 	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
-	filter: saturate(149%);
 }
 
 section ul{
@@ -231,11 +229,11 @@ footer .title:before{
 
 @keyframes showAvatar{
 	0%{
-		filter: opacity(0%)saturate(126%);
+		filter: opacity(0%);
 		transform: scale(0.5);
 	}
 	100%{
-		filter: opacity(100%)saturate(126%);
+		filter: opacity(100%);
 		transform: scale(1);
 	}
 }
